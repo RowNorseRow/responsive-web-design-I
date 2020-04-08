@@ -1,88 +1,21 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
 body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* Set every element's box-sizing to border-box */
-* {
-    box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
+    width: 90%;
+    margin: auto;    
     font-family: 'Titillium Web', sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-}
-
-body {
-    width: 60%;
-    box-sizing: border-box;
-    margin: auto;
-    font-family: 'Titillium Web', sans-serif;
-}
 .navigation {
-    width: 100%;
-    
-    padding-bottom: 5%;
-    padding-top: 5px;
-    margin: auto;
+    color: lightgray;
+    position: sticky;
+    top: 0;
+    background-color: white;
 }
 
-.navigation li{
-    display: inline-block;
-    width: 13.5%;
-    color: lightgray;
+.navItems {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;            
 }
 a, a:visited, a:hover, a:active {
     color: inherit;
@@ -90,109 +23,68 @@ a, a:visited, a:hover, a:active {
 }
 
 .heading {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     
-    margin: auto;
-    padding-bottom: 5%;
 }
 
 .IOD {
-    display: inline-block; 
-    box-sizing: border-box;
-    
-    width: 45%;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    vertical-align: top;
-    padding-top: 2.5%;
+    align-items: center;
+}
+
+.iodImg {
+    display: flex;
+    width: 350px;
+}
+
+.section1{
+    display: flex; 
+    justify-content: space-between;   
+    margin: 0;
+}
+
+.Features, .About, .Services, .Product, .Vision {
+    margin-right: 15px;
+    align-items: flex-start;
+}
+
+
+img {
+    width: 100%;
     
-    
+}
+.section2{
+    display: flex;
+    justify-content: space-between; 
+    margin: 0;   
 }
 
 h1 {
-    display: inline-block;
-    font-size: 6rem;
-    text-align: center;
-    vertical-align: top;
-    
+    font-size: 4rem;
+    margin: 10px;
+}
+
+button {
+    width: 60%;
+    padding: 5px;
+    font-size: 1.1rem;
+    font-family: inherit;
 }
 
 h1, h2 {
     font-family: 'Bangers', cursive;
 }
 
-
-.IOD button{
-    display: block;
-    text-align: center;
-    margin: auto;
-    width: 25%;
-}
-
-.iodImg {
-    display: inline-block;
-    box-sizing: border-box;
-    margin: auto;
-    width: 45%;
-    padding-left: 10%;
-}
-
-
-
-.section1 {
-    display: inline-block;
-    margin: auto;
-    padding-top: 3%;
-    padding-bottom: 3%;
-}
-
-.Features {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 49.5%;
-    margin: auto;
-}
-
-.About {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 49.5%;
-    margin: auto;
-}
-
-.middle-img {
-    width: 100%;
-    margin: auto;
-    padding-top: 3%;
-    padding-bottom: 3%;
-
-}
-
-.Services {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 33%;
-}
-
-.Product {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 33%;
-}
-
-.Vision {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 33%;
-}
-
-address {
-    padding-top: 3%;
-    padding-bottom: 3%;
-}
-
 footer {
     text-align: center;
 }
 
-br {
-    width: 100%;
+@media screen and (max-width: 800px) {
+    .navItems {
+        flex-direction: row-reverse;
+    }
 }
