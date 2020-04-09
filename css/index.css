@@ -83,7 +83,7 @@ h1 {
 }
 
 button {
-    width: 60%;
+    width: 200px;
     padding: 5px;
     font-size: 1.1rem;
     font-family: inherit;
@@ -95,6 +95,34 @@ h1, h2, h3{
 
 footer {
     text-align: center;
+}
+.Facts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.bigFacts, .factsImg {
+    width: 49%;      
+}
+
+.factsImg {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+}
+
+
+.services-info-img {
+    max-width: 500px;
+    display: flex;
+    
+    
+    
 }
 
 @media screen and (max-width: 800px) {
@@ -116,6 +144,18 @@ footer {
 
     .iodImg {
         display: none;
+    }
+
+    .Facts {
+        flex-direction: column;
+    }
+
+    .bigFacts, .factsImg {
+        width: 100%;
+    }
+
+    .factsImg {
+        align-self: flex-end:
     }
 
 }
@@ -153,5 +193,16 @@ footer {
         flex-direction: column;
     }
 
+    .Facts {
+        flex-direction: column;
+    }
+
+    .bigFacts, .factsImg {
+        width: 100%;
+    }
+
+    .Facts {
+        flex-direction: row;
+    }
         
 }
