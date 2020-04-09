@@ -2,10 +2,11 @@ body {
     width: 90%;
     margin: auto;    
     font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
 }
 
 .navigation {
-    color: lightgray;
+    color: darkgray;
     position: sticky;
     top: 0;
     background-color: white;
@@ -15,11 +16,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    list-style: none;    
+    list-style: none;
+    padding: 0;            
 }
 
 .logo {    
-    display: none;        
+    display: none;
+    margin: 5%;        
 }
 
 .logo img {
@@ -86,7 +89,7 @@ button {
     font-family: inherit;
 }
 
-h1, h2 {
+h1, h2, h3{
     font-family: 'Bangers', cursive;
 }
 
@@ -115,5 +118,40 @@ footer {
         display: none;
     }
 
+}
 
+@media screen and (max-width: 500px) {
+    .navigation {
+        position: relative;
+        
+    }
+    
+    .navItems {
+        flex-direction: column;
+        
+        justify-content: center;
+        align-content: flex-start;
+    }
+
+    .navItems li {
+        display: flex;
+        font-size: 1.5rem;
+        border-bottom: 1px solid black;
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+        padding: 10px;        
+    }
+
+    .navItems li:first-child {
+        border-top: 1px solid black;
+        
+    }
+
+    .section1, .section2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+        
 }
